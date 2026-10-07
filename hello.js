@@ -13,3 +13,6 @@ console.groupEnd();
 
 const a = 5
 console.log(a);
+
+let b1 = true;
+console.log(b1);
