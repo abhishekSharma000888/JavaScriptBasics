@@ -10,3 +10,6 @@ console.group('User Information');
 console.log('Name: Abhishek');
 console.log('Age: 30');
 console.groupEnd();
+
+const a = 5
+console.log(a);
