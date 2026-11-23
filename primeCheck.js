@@ -1,18 +1,19 @@
-const numbers = [1,3,4,8,9,11,13,14];
+const numbers = [1,2,17,19,424,24242131,8,7];
 
-for(let num of numbers){
-
+for(let num of numbers ){
     let isPrime = true;
+
     if(num <=1){
-        isPrime = false;
+        console.log("The number is not prime: " + num);
     }
-    for(let i=2; i<=Math.sqrt(num);i++){
-        if(num%i==0){
+
+    for(let i=2; i<=Math.sqrt(num); i++){
+        if(num%i ==0){
             isPrime = false;
             break;
         }
     }
     if(isPrime){
-        console.log(num + " is a prime number");
+        console.log("The number is prime: "+ num);
     }
 }
