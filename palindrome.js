@@ -10,8 +10,6 @@ for(let num of numbers){
         isPalindrome = false;
     }
     if(isPalindrome){
-        console.log(num + " is Palindrome");
-    } else {
-        console.log(num + " Is not a Palindrome");
+        console.log("The given input is a palindrome: "+ num );
     }
 }
