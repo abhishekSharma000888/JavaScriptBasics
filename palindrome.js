@@ -1,18 +1,16 @@
-const numbers = [1,2,3,4,56,77,91,111,93,0];
+const numbers = [121,131,133,156,161,171];
 
 for(let num of numbers){
-    let isPrime = true;
-    if(num <=1){
-        isPrime = false;
+    let isPalindrome = true;
+    let original = num.toString();
+    let reverse = original.split("").reverse().join("");
+
+    if( original != reverse){
+        isPalindrome = false;
     }
-    for(let i=2; i<=Math.sqrt(num); i++){
-        if(num%i == 0){
-            isPrime = false;
-        }
-    }
-    if(isPrime){
-        console.log(num + " is prime");
+    if(isPalindrome){
+        console.log(num + " is Palindrome");
     } else {
-        console.log(num + " is not prime");
+        console.log(num + " is not Palindrome");
     }
 }
