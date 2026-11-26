@@ -1,16 +1,18 @@
-const numbers = [121,131,321,424,456,111];
+const numbers = [1,2,3,4,56,77,91,111,93,0];
 
-let isPalindrome = true;
-for(let num of numbers) {
-    let original = num.toString();
-    let reverse = original.split("").reverse().join("");
-    if(original != reverse){
-        isPalindrome = false;
+for(let num of numbers){
+    let isPrime = true;
+    if(num <=1){
+        isPrime = false;
     }
-    if(isPalindrome){
-        console.log("The input is palindrome: "+ num);
-    } else{
-        console.log("The input is not a palindrome: "+ num);
+    for(let i=2; i<=Math.sqrt(num); i++){
+        if(num%i == 0){
+            isPrime = false;
+        }
     }
-
+    if(isPrime){
+        console.log(num + " is prime");
+    } else {
+        console.log(num + " is not prime");
+    }
 }
