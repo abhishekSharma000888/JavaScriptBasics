@@ -1,20 +1,19 @@
-const numbers = [1,2,3,4,5,67,77,79];
+const numbers = [1,2,3,0,7,9,171];
+
 for(let num of numbers){
-    isPrime=true;
+    let isPrime = true;
     if(num <=1){
-        console.log("The number should be greater than 1 to validate eligibility to be a prime");
         isPrime = false;
     }
     for(let i=2; i<=Math.sqrt(num); i++){
-        if(num%i==0){
+        if(num%i ==0){
             isPrime = false;
-            break;
         }
     }
-    if(isPrime){
-        console.log("The number is Prime: "+ num);
-    } else {
-        console.log("The number is not Prime: "+ num);
-    }
 
+    if(isPrime){
+        console.log(num + " :is prime");
+    } else{
+        console.log(num + " :is not prime");
+    }
 }
